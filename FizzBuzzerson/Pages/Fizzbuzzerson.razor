@@ -17,11 +17,11 @@
     <li>- Notice that anything that had "FizzBuzz" is now not there</li>
 </ul>
 <div class="row">
-    <div class="col-3">Fizz Value:</div>
+    <div class="col-3">Fizz Value: (Enter a value between 1-100)</div>
     <div class="col"><input class="form-control-plaintext" type="number" @bind="@FizzValue" /></div>
 </div>
 <div class="row">
-    <div class="col-3">Buzz Value:</div>
+    <div class="col-3">Buzz Value: (Enter a value between 1-100)</div>
     <div class="col"><input class="form-control-plaintext" type="number" @bind="@BuzzValue" /></div>
 </div>
 <div class="row">
@@ -115,8 +115,10 @@
 
             if (Fizz && Buzz)
             {
-                buzzItems[i - 1].Value = "HERE";
+
                 buzzItems[i - 1].ClassName = "invisible";
+                buzzItems[i - 1].Value = "";
+                buzzItems[i - 1].ClassName = "visible bg-dark bugs";
             }
         }
     }
