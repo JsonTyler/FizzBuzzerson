@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\15094\source\repos\FizzBuzzerson\FizzBuzzerson\bin\Debug\netstandard2.1\wwwroot\" />
+  <ContentRoot BasePath="_content/BlazorAnimate" Path="C:\Users\15094\.nuget\packages\blazoranimate\2.0.0\build\..\staticwebassets\" />
+</StaticWebAssets>
