@@ -22,7 +22,7 @@
     </div>
     <div class="row ">
         <div class="col-12">
-            <input class="form-control btn-outline-dark" type="number" @bind="@FizzValue" />
+            <input class="form-control" type="number" @bind="@FizzValue" />
             <small class="text-muted">(Enter a value between 1-100)</small>
         </div>
     </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="row ">
         <div class="col-12">
-            <input class="form-control btn-outline-dark" type="number" @bind="@BuzzValue" />
+            <input class="form-control" type="number" @bind="@BuzzValue" />
             <small class="text-muted">(Enter a value between 1-100)</small>
         </div>
     </div>
@@ -78,7 +78,7 @@
 
 @code {
 
-    string disabler = "disabled";
+    string disabler = "disabled btn-outline-danger";
 
     List<BuzzItem> buzzItems = new List<BuzzItem>();
 
@@ -121,7 +121,7 @@
             }
 
         }
-        disabler = "bg-success";
+        disabler = "bg-success btn-outline-success";
 
 
 
