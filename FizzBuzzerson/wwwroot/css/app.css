@@ -216,3 +216,8 @@ app {
     display: none;
     visibility: hidden;
 }
+
+.bugs {
+    background-image: url("../sample-data/buzz.jpg");
+    height: 100%;
+}
