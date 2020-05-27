@@ -1,5 +1,6 @@
-﻿@page "/FizzBuzzerson"
-<h3>Fizzbuzzerson</h3>
+﻿@page "/"
+
+<h5>Project Background: FizzBuzzerson</h5>
 
 <p>
     Project Background: Below is a project inspired by Coder Foundry's youtube <a href="https://www.youtube.com/watch?v=zOY5a-J0t6E">video</a>.
@@ -8,60 +9,77 @@
     and the modulus operator. I was inspired by Coder Foundry's video as well as my preparation for my first interview experience
     back in 2017 with Lockheed Martin where I first became aware of what Fizz Buzz even was.
 </p>
+<h5>Further Reading on Fizzbuzz: </h5>
 <ul>
-    Instructions:
-    <li>- Enter two numbers (3 and 5 are there by default)</li>
-    <li>- Click "FizzBuzz It"</li>
-    <li>- Look at your results</li>
-    <li>- Click "Smash It"</li>
-    <li>- Notice that anything that had "FizzBuzz" is now not there</li>
+    <li><a href="https://blog.usejournal.com/about-coding-the-fizzbuzz-interview-question-9bcd08d9dfe5">Blog Article on FizzBuzz</a></li>
 </ul>
-<div class="row">
-    <div class="col-3">Fizz Value: (Enter a value between 1-100)</div>
-    <div class="col"><input class="form-control-plaintext" type="number" @bind="@FizzValue" /></div>
-</div>
-<div class="row">
-    <div class="col-3">Buzz Value: (Enter a value between 1-100)</div>
-    <div class="col"><input class="form-control-plaintext" type="number" @bind="@BuzzValue" /></div>
-</div>
-<div class="row">
-    <div class="col">
-        <button class="btn btn-danger" @onclick="FizzBuzzIt">FizzBuzz It</button>
-        <button class="btn btn-danger" @onclick="SmashIt">Smash It</button>
-    </div>
-</div>
 
-@if (buzzItems.Count() > 0)  
-{
-    <div class="row pt-5">
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered table-hover table-sm">
-                <thead>
-                    <tr><th class="bg-dark text-white" colspan="10">FizzBuzz Results</th></tr>
-                </thead>
-                <tbody>
-                    @for (var i = 0; i < 100; i += 10)
-                    {
-                        <tr>
-                            <td class="@buzzItems[i].ClassName">@buzzItems[i].Value</td>
-                            <td class="@buzzItems[i+1].ClassName">@buzzItems[i + 1].Value</td>
-                            <td class="@buzzItems[i+2].ClassName">@buzzItems[i + 2].Value</td>
-                            <td class="@buzzItems[i+3].ClassName">@buzzItems[i + 3].Value</td>
-                            <td class="@buzzItems[i+4].ClassName">@buzzItems[i + 4].Value</td>
-                            <td class="@buzzItems[i+5].ClassName">@buzzItems[i + 5].Value</td>
-                            <td class="@buzzItems[i+6].ClassName">@buzzItems[i + 6].Value</td>
-                            <td class="@buzzItems[i+7].ClassName">@buzzItems[i + 7].Value</td>
-                            <td class="@buzzItems[i+8].ClassName">@buzzItems[i + 8].Value</td>
-                            <td class="@buzzItems[i+9].ClassName">@buzzItems[i + 9].Value</td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
+<h5>Demo</h5>
+<div class="container-fluid bg-dark text-light">
+
+    <div class="row py-1 ">
+        <div class="col-12">Fizz Value: </div>
+    </div>
+    <div class="row ">
+        <div class="col-12">
+            <input class="form-control btn-outline-dark" type="number" @bind="@FizzValue" />
+            <small class="text-muted">(Enter a value between 1-100)</small>
         </div>
     </div>
-}
+    <div class="row pt-1 ">
+        <div class="col-12">Buzz Value: </div>
+    </div>
+    <div class="row ">
+        <div class="col-12">
+            <input class="form-control btn-outline-dark" type="number" @bind="@BuzzValue" />
+            <small class="text-muted">(Enter a value between 1-100)</small>
+        </div>
+    </div>
+    <div class="row py-2">
+        <div class="col">
+            <button class="btn btn-outline-danger @disabler" @onclick="SmashIt"><span class="oi oi-bug"></span></button>
+            <button class="btn btn-success" @onclick="FizzBuzzIt">FizzBuzz It</button>
+        </div>
+    </div>
+        @if (buzzItems.Count() > 0)
+        {
+
+            <div class="row pt-5 mx-3">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover table-sm px-3">
+                        <thead>
+                            <tr><th class="bg-dark text-white" colspan="10">FizzBuzz Results</th></tr>
+                        </thead>
+                        <tbody>
+                            @for (var i = 0; i < 100; i += 10)
+                            {
+                                <tr>
+                                    <td class="@buzzItems[i].ClassName">@buzzItems[i].Value</td>
+                                    <td class="@buzzItems[i+1].ClassName">@buzzItems[i + 1].Value</td>
+                                    <td class="@buzzItems[i+2].ClassName">@buzzItems[i + 2].Value</td>
+                                    <td class="@buzzItems[i+3].ClassName">@buzzItems[i + 3].Value</td>
+                                    <td class="@buzzItems[i+4].ClassName">@buzzItems[i + 4].Value</td>
+                                    <td class="@buzzItems[i+5].ClassName">@buzzItems[i + 5].Value</td>
+                                    <td class="@buzzItems[i+6].ClassName">@buzzItems[i + 6].Value</td>
+                                    <td class="@buzzItems[i+7].ClassName">@buzzItems[i + 7].Value</td>
+                                    <td class="@buzzItems[i+8].ClassName">@buzzItems[i + 8].Value</td>
+                                    <td class="@buzzItems[i+9].ClassName">@buzzItems[i + 9].Value</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </div>
+
+
+
 
 @code {
+
+    string disabler = "disabled";
+
     List<BuzzItem> buzzItems = new List<BuzzItem>();
 
     private int FizzValue = 3;
@@ -70,6 +88,8 @@
 
     bool Fizz = false;
     bool Buzz = false;
+
+    protected bool IsDisabled { get; set; }
 
     void FizzBuzzIt()
     {
@@ -85,7 +105,7 @@
 
             if (Fizz && Buzz)
             {
-                buzzItems.Add(new BuzzItem { Value = "FizzBuzz", ClassName = "fizzBuzz"});
+                buzzItems.Add(new BuzzItem { Value = "FizzBuzz", ClassName = "fizzBuzz" });
             }
             else if (Fizz)
             {
@@ -101,6 +121,9 @@
             }
 
         }
+        disabler = "bg-success";
+
+
 
 
 
@@ -115,12 +138,14 @@
 
             if (Fizz && Buzz)
             {
-
                 buzzItems[i - 1].ClassName = "invisible";
                 buzzItems[i - 1].Value = "";
                 buzzItems[i - 1].ClassName = "visible bg-dark bugs";
+
             }
         }
+
+        disabler = "disabled";
     }
 
 
