@@ -13,4 +13,4 @@ An exploratory project while learning Blazor Web Assembly that creates a working
 Blazor Web Assembly, C#, Bootstrap, HTML5/CSS3, Javascript
 
 ## Will I accept pull requests? <img src="logo.png" width="40" />
-No I will not, as this is a personal resume/portfolio project. I always welcome feedback on how to improve my portfolio projects.
+No I will not, as this is a personal exploratory/blog project. I always welcome feedback on how to improve my portfolio projects.
