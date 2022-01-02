@@ -4,7 +4,7 @@
 Fizzbuzzerson
 #### Purpose:
 An exploratory project while learning Blazor Web Assembly that creates a working visual example of the common coding interview question "Fizz Buzz"
-##### Description of Fizz Buzz: [Description](https://www.geeksforgeeks.org/fizz-buzz-implementation/)
+#### Description of Fizz Buzz: [Link](https://www.geeksforgeeks.org/fizz-buzz-implementation/)
 
 ## Live Version <img src="logo.png" width="40" />
 #### Link: [Demo](https://fizzbuzzerson.jasontylerrodriguez.com)
